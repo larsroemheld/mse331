@@ -1,0 +1,2 @@
+# word-occurence of words in snippet
+# multimedia array - size (#images in article)
