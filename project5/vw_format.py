@@ -34,7 +34,7 @@ def vw_format():
             output += "wc " + str(len(article['headline']['main'].split())) + " "
 
             output += "|Multimedia "
-            output += "count " + str(len(article['multimedia'].length())) + " "
+            output += "count " + str(len(article['multimedia'])) + " "
 
             print output.encode('utf-8')
         
