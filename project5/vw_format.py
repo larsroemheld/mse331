@@ -31,10 +31,10 @@ def vw_format():
                 output += key + ":" + str(len(list(group))) + " "
             
             output += "|Headline "
-            output += "wc " + str(len(article['headline']['main'].split())) + " "
+            output += "wc:" + str(len(article['headline']['main'].split())) + " "
 
             output += "|Multimedia "
-            output += "count " + str(len(article['multimedia'].length())) + " "
+            output += "count:" + str(len(article['multimedia'].length())) + " "
 
             print output.encode('utf-8')
         
