@@ -15,12 +15,12 @@ def vw_format():
         for article in obj['response']['docs']:
             output = ''
             if article['news_desk'] == 'Sports':
-                output = '1 1.0 |'
+                output = '1 1.0 1|'
             else:
-                output = '-1 1.0 |'
+                output = '-1 1.0 -1|'
 
             snippet = article['snippet']
-            snippet = re.sub('|:\n,.;-', '', snippet)
+            snippet = re.sub('|:\n,.;!', '', snippet)
             tokens = [i for i in snippet.lower().split() if i not in stop]
             output += "TokenCounts "
             for key, group in groupby(tokens):
