@@ -29,12 +29,14 @@ def vw_format():
             output += "TokenCounts "
             for key, group in groupby(tokens):
                 output += key + ":" + str(len(list(group))) + " "
-            
-            output += "|Headline "
-            output += "wc:" + str(len(article['headline']['main'].split())) + " "
 
-            output += "|Multimedia "
-            output += "count:" + str(len(article['multimedia'].length())) + " "
+            if article.get('headline'):
+                output += "|Headline "
+                output += "wc:" + str(len(article['headline']['main'].split())) + " "
+
+            if article.get('multimedia'):
+                output += "|Multimedia "
+                output += "count:" + str(len(article['multimedia'])) + " "
 
             print output.encode('utf-8')
         
