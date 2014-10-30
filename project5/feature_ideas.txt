@@ -1,9 +1,9 @@
 Model news_desk='Sports', given the following features:
 
 # word-occurence of words in snippet
-# word-count of words in snippet
-# multimedia array - size (#images in article)
-# headline #words
+! word-count of words in snippet
+! multimedia array - size (#images in article)
+! headline #words
 # headline word-occurence
 # media filename words (tokenized by splitting between '-')
 # keyword.value s
