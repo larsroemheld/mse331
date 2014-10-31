@@ -4,8 +4,9 @@ import sys
 import random
 
 def split_examples():
-    training = open('training_data_multi.txt', 'wb')
-    test = open('test_data_multi.txt', 'wb')
+    random.seed(11)
+    training = open('training_data_word.txt', 'wb')
+    test = open('test_data_word.txt', 'wb')
 
     for line in sys.stdin:
         if random.random() > .8:
