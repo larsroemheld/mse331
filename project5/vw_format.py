@@ -30,9 +30,9 @@ def vw_format():
             for key, group in groupby(tokens):
                 output += key + ":" + str(len(list(group))) + " "
 
-            if article.get('headline'):
-                output += "|Headline "
-                output += "wc:" + str(len(article['headline']['main'].split())) + " "
+            # if article.get('headline'):
+            #     output += "|Headline "
+            #     output += "wc:" + str(len(article['headline']['main'].split())) + " "
 
             if article.get('multimedia'):
                 output += "|Multimedia "
