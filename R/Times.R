@@ -7,7 +7,7 @@ library(boot)
 rm(list=ls())
 gc()
 setwd("~/Dropbox/Stanford/2014-09 Courses/Computational Social Science MS&E331/Homework/Project 2/project5")
-pred.times<- fread('test_predictions_lars.txt',sep=" ",header=FALSE)
+pred.times<- fread('test_predictions.txt',sep=" ",header=FALSE)
 pred.times.lars<- fread('test_predictions_lars.txt',sep=" ",header=FALSE)
 pred.times.multi<- fread('test_predictions_multi.txt',sep=" ",header=FALSE)
 
@@ -40,5 +40,5 @@ plot(perf.multi)
 
 plot(perf,col='red')
 plot(perf.multi, add=TRUE,col='blue')
-
+plot(perf.lars,add=TRUE, col='green')
 
